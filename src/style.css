@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Card grid {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  height: 20px;
+  weight: 30px;
+}
+
+.add-btn {
+  background-color: white;
+  color: #2e7d32;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display :flex;
+    flex-wrap: wrap;
+    justify-self: space-between;
+    padding: 20px;
+}
+.add-btn:hover {
+  background-color: #c8e6c9;
+  color:blue;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.card-banner {
+  height: 90px;
+  width: 100%;
+}
+
+.card.purple .card-banner {
+  background-color: #9c27b0;
+}
+
+.card.cyan .card-banner {
+  background-color: #00bcd4;
+}
+
+.card.green .card-banner {
+  background-color: #8bc34a;
+}
+
+.card.orange .card-banner {
+  background-color: orange;
+}
+

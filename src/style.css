@@ -86,4 +86,12 @@
 .card.orange .card-banner {
   background-color: orange;
 }
-
+.flex{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+.flex div{
+    width: 300px;
+}

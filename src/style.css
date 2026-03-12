@@ -1,15 +1,14 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-.body {
+body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
-  padding: 16px;
+  padding: 20px;
+  max-width: 100%;
 }
 
 .header {
@@ -23,14 +22,35 @@
   margin-bottom: 24px;
 }
 
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-check {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .header h2 {
   font-size: 18px;
   font-weight: 600;
-  height: 20px;
-  width: 30px;
 }
 
-.add-btn {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-card-btn {
   background-color: white;
   color: #2e7d32;
   border: none;
@@ -39,19 +59,21 @@
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  display :flex;
-    flex-wrap: wrap;
-    justify-self: space-between;
-    padding: 20px;
 }
-.add-btn:hover {
+
+.add-card-btn:hover {
   background-color: #c8e6c9;
-  color:blue;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -61,6 +83,9 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -71,6 +96,28 @@
 .card-banner {
   height: 90px;
   width: 100%;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #333;
+}
+
+.card-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+}
+
+.red-cross {
+  color: red;
 }
 
 .card.purple .card-banner {
@@ -86,14 +133,13 @@
 }
 
 .card.orange .card-banner {
-  background-color: orange;
+  background-color: #ff9800;
 }
-.flex{
-     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
+
+.card.light-blue .card-banner {
+  background-color: #03a9f4;
 }
-.flex div{
-    width: 300px;
+
+.card.pink .card-banner {
+  background-color: #e91e63;
 }
